@@ -1,0 +1,159 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Política de Privacidade — AnexoWork</title>
+<!--
+  PENDÊNCIAS ANTES DE PUBLICAR (não removidas do build, apenas deste comentário):
+  1. Confirmar CNPJ da Anexo Tecnologia e incluir na seção "Quem somos" se a empresa optar por divulgá-lo.
+  2. Confirmar que privacidade@anexotecnologia.com.br é uma caixa de e-mail real e monitorada antes de publicar.
+  3. Confirmar que a API de produção passará a usar HTTPS antes de publicar (ver seção "Segurança")
+     — hoje o app aponta para um IP local sem TLS; a promessa de "dados criptografados em trânsito" só é
+     verdadeira depois dessa troca (ver relatório docs/relatorio-gap-publicacao-play-store.md, item 02).
+  4. Revisar com jurídico antes de publicar publicamente.
+-->
+<style>
+  :root {
+    --bg: #FAFAF8;
+    --surface: #FFFFFF;
+    --ink: #17211D;
+    --ink-muted: #51625B;
+    --line: #E2E5E0;
+    --accent: #2E5C8A;
+    --accent-soft: #E4ECF4;
+    --warn: #B5471F;
+    --warn-soft: #FBEAE1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #101614; --surface: #171F1C; --ink: #E7ECE8; --ink-muted: #9FB0A8;
+      --line: #29332F; --accent: #79ACDA; --accent-soft: #1C2B38;
+      --warn: #E2865E; --warn-soft: #2E1D14;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.65;
+  }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 48px 20px 96px; }
+  header { margin-bottom: 32px; border-bottom: 1px solid var(--line); padding-bottom: 24px; }
+  h1 { font-size: 26px; margin: 0 0 8px; }
+  .meta { color: var(--ink-muted); font-size: 14px; }
+  h2 { font-size: 18px; margin: 40px 0 12px; border-left: 3px solid var(--accent); padding-left: 12px; }
+  h3 { font-size: 15px; margin: 24px 0 8px; }
+  p { margin: 0 0 14px; }
+  a { color: var(--accent); }
+  ul, ol { padding-left: 22px; margin: 0 0 14px; }
+  li { margin-bottom: 6px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 20px; font-size: 14px; background: var(--surface); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+  th, td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
+  th { background: var(--accent-soft); color: var(--accent); font-size: 12.5px; text-transform: uppercase; letter-spacing: 0.03em; }
+  tr:last-child td { border-bottom: none; }
+  .box { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 16px 18px; margin: 0 0 16px; }
+  .contact { background: var(--accent-soft); border-radius: 10px; padding: 18px 20px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 0.9em; background: var(--accent-soft); padding: 0.1em 0.4em; border-radius: 4px; }
+  footer { margin-top: 48px; padding-top: 20px; border-top: 1px solid var(--line); color: var(--ink-muted); font-size: 13px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<header>
+  <h1>Política de Privacidade — AnexoWork</h1>
+  <p class="meta">Última atualização: 21 de julho de 2026 · Versão 1.0</p>
+</header>
+
+<p>Esta Política de Privacidade descreve como o <strong>AnexoWork</strong> ("app", "aplicativo") coleta, usa, armazena e protege os dados pessoais de seus usuários, em conformidade com a Lei Geral de Proteção de Dados Pessoais (Lei nº 13.709/2018 — LGPD).</p>
+
+<p>O AnexoWork é um aplicativo corporativo usado por colaboradores de empresas clientes ("empresa contratante") para acessar módulos internos como questionários, avisos, documentos, informes financeiros e um canal de denúncia. Cada empresa contratante opera como uma instância isolada dentro do app (modelo multi-tenant); os dados de uma empresa não são acessíveis por outra.</p>
+
+<h2>1. Quem é o controlador dos dados</h2>
+<div class="box">
+  <p style="margin-bottom:0;"><strong>Anexo Tecnologia</strong> é a desenvolvedora e operadora da plataforma AnexoWork e atua como <strong>operadora</strong> dos dados em nome de cada empresa contratante, que é a <strong>controladora</strong> dos dados de seus próprios colaboradores. Dúvidas sobre o tratamento de dados dentro de uma empresa específica também podem ser direcionadas ao RH ou à administração dessa empresa.</p>
+</div>
+
+<h2>2. Quais dados coletamos</h2>
+<table>
+  <thead><tr><th>Dado</th><th>Onde é coletado</th><th>Finalidade</th><th>Obrigatório?</th></tr></thead>
+  <tbody>
+    <tr><td>Nome, e-mail e senha</td><td>Cadastro / login</td><td>Autenticação e identificação do usuário</td><td>Sim</td></tr>
+    <tr><td>CPF, telefone, data de admissão, departamento</td><td>Tela de perfil</td><td>Identificação do colaborador perante a empresa contratante</td><td>Conforme cadastro feito pela empresa</td></tr>
+    <tr><td>Foto de perfil</td><td>Câmera ou galeria do aparelho</td><td>Personalização da conta</td><td>Não — opcional</td></tr>
+    <tr><td>Respostas de questionários</td><td>Módulo de questionários</td><td>Pesquisas internas da empresa contratante</td><td>Conforme uso do módulo</td></tr>
+    <tr><td>Anexos (documentos, PDFs, imagens)</td><td>Módulo de denúncia</td><td>Instrução do relato enviado ao canal de denúncia</td><td>Não — opcional</td></tr>
+    <tr><td>Token de notificação push</td><td>Automático, ao instalar o app</td><td>Envio de notificações e avisos internos</td><td>Não — pode ser desativado nas permissões do aparelho</td></tr>
+  </tbody>
+</table>
+
+<h3>Canal de denúncia anônima</h3>
+<p>O módulo de denúncia foi desenhado para permitir relatos <strong>sem identificação obrigatória</strong> do denunciante. Quando o usuário opta por não se identificar, o app não associa o relato a uma conta de usuário. Anexos enviados junto ao relato (documentos, imagens) são tratados com o mesmo nível de confidencialidade do restante do canal, seguindo a política de não retaliação e sigilo da empresa contratante.</p>
+
+<h2>3. Base legal para o tratamento</h2>
+<ul>
+  <li><strong>Execução de contrato / obrigação legal trabalhista</strong> — dados cadastrais do colaborador (nome, CPF, telefone, data de admissão), necessários para a relação entre a empresa contratante e seu colaborador.</li>
+  <li><strong>Consentimento</strong> — foto de perfil e anexos enviados voluntariamente pelo usuário.</li>
+  <li><strong>Cumprimento de obrigação legal ou regulatória / interesse legítimo</strong> — dados do canal de denúncia, quando usado no contexto de programas de compliance e integridade da empresa contratante.</li>
+  <li><strong>Interesse legítimo</strong> — token de notificação push, para viabilizar comunicados internos.</li>
+</ul>
+
+<h2>4. Com quem compartilhamos dados</h2>
+<p>Não vendemos nem compartilhamos dados pessoais com terceiros para fins de publicidade. Os dados podem ser processados pelos seguintes prestadores de serviço, estritamente para viabilizar o funcionamento do app:</p>
+<ul>
+  <li><strong>Servidores da empresa contratante / backend do AnexoWork</strong> — armazenamento principal dos dados cadastrais, questionários, documentos e denúncias.</li>
+  <li><strong>Firebase Cloud Messaging (Google LLC)</strong> — entrega de notificações push. O Google pode processar o token de notificação em servidores localizados fora do Brasil, como parte da prestação desse serviço.</li>
+</ul>
+
+<h2>5. Transferência internacional de dados</h2>
+<p>Em decorrência do uso do Firebase Cloud Messaging, dados estritamente necessários ao envio de notificações (o token do dispositivo) podem ser processados em infraestrutura do Google fora do território brasileiro. Esse tratamento está limitado à finalidade de entrega de notificações e é regido pelas cláusulas contratuais e de proteção de dados do próprio Google.</p>
+
+<h2>6. Como protegemos os dados</h2>
+<ul>
+  <li>Tokens de autenticação são armazenados no dispositivo usando armazenamento seguro nativo (<code>expo-secure-store</code>), não em texto plano.</li>
+  <li>O acesso aos dados dentro do app é restrito por autenticação e por perfil de permissão do usuário.</li>
+  <li>Comunicação entre o app e os servidores é feita de forma criptografada (HTTPS/TLS) em produção.</li>
+</ul>
+
+<h2>7. Por quanto tempo guardamos os dados</h2>
+<p>Os dados cadastrais são mantidos enquanto durar o vínculo do colaborador com a empresa contratante, e pelo prazo adicional exigido por obrigações legais, fiscais e trabalhistas aplicáveis. Dados do canal de denúncia são retidos pelo prazo necessário à apuração do relato, conforme a política interna de compliance da empresa contratante.</p>
+
+<h2>8. Seus direitos como titular de dados (LGPD, art. 18)</h2>
+<p>Você pode, a qualquer momento, solicitar:</p>
+<ul>
+  <li>Confirmação da existência de tratamento dos seus dados;</li>
+  <li>Acesso aos seus dados;</li>
+  <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+  <li>Anonimização, bloqueio ou eliminação de dados desnecessários ou tratados em desconformidade com a lei;</li>
+  <li>Portabilidade dos dados a outro fornecedor;</li>
+  <li>Eliminação dos dados pessoais tratados com consentimento;</li>
+  <li>Informação sobre com quem seus dados são compartilhados;</li>
+  <li>Revogação do consentimento, quando aplicável.</li>
+</ul>
+
+<h2>9. Como solicitar a exclusão dos seus dados</h2>
+<p>Dentro do app, acesse <strong>Perfil → Configurações da Conta → Solicitar Exclusão de Dados</strong>. Essa opção abre um e-mail pré-preenchido para o endereço abaixo. Você também pode enviar a solicitação diretamente, ou procurar o RH/administrador da sua empresa contratante.</p>
+<p>Solicitações de exclusão de dados cadastrais podem estar sujeitas a prazos de retenção obrigatórios por lei (por exemplo, obrigações trabalhistas e fiscais), que serão informados no retorno da solicitação.</p>
+
+<h2>10. Menores de idade</h2>
+<p>O AnexoWork é destinado a colaboradores de empresas e não é direcionado a crianças ou adolescentes.</p>
+
+<h2>11. Alterações nesta política</h2>
+<p>Esta política pode ser atualizada periodicamente. Alterações relevantes serão comunicadas por aviso no app ou por e-mail. A data de "última atualização" no topo desta página sempre reflete a versão vigente.</p>
+
+<h2>12. Contato</h2>
+<div class="contact">
+  <p style="margin-bottom:0;">Dúvidas, solicitações ou reclamações sobre esta política podem ser enviadas para:<br>
+  <strong><a href="mailto:privacidade@anexotecnologia.com.br">privacidade@anexotecnologia.com.br</a></strong></p>
+</div>
+
+<footer>
+  AnexoWork · Anexo Tecnologia · Esta página é hospedada publicamente para fins de conformidade com as políticas de dados do Google Play.
+</footer>
+
+</div>
+</body>
+</html>
